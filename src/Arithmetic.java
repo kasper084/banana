@@ -17,7 +17,10 @@ public class Arithmetic {
         biggest = (big * (big - (smaller + smallest)));
         floating = random.nextFloat();
         longFloating = biggest/floating;
-        System.out.println("Some random number:" + "\n" + longFloating);
+        System.out.println("result of + is:" + "\n" + (smaller + smallest));
+        System.out.println("result of - is:" + "\n" + (big - (smaller + smallest)));
+        System.out.println("result of * is:" + "\n" + biggest);
+        System.out.println("result of / is:" + "\n" + longFloating);
     }
 
 }
