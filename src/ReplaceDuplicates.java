@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ReplaceDuplicates {
     public static void main(String[] args) {
         int[] arr = {3, 2, 3, 1, 4, 2, 8, 3};
@@ -10,8 +12,12 @@ public class ReplaceDuplicates {
             }
         }
 
+       /*
         for (int print = 0; print < arr.length; print++) {
             System.out.print(arr[print]);
         }
+        */
+       System.out.println(Arrays.toString(arr));
+
     }
 }
