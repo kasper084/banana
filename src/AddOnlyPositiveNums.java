@@ -4,8 +4,9 @@ public class AddOnlyPositiveNums {
         int sum = 0;
 
         for (int start = 0; start < arr.length; start++) {
-            if (arr[start] > 0) {
-                sum += arr[start];
+            int num = arr[start];
+            if (num > 0) {
+                sum += num;
             } else {
                 continue;
             }
