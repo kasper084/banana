@@ -12,12 +12,7 @@ public class ReplaceDuplicates {
             }
         }
 
-       /*
-        for (int print = 0; print < arr.length; print++) {
-            System.out.print(arr[print]);
-        }
-        */
-       System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
 
     }
 }

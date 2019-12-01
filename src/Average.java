@@ -8,7 +8,7 @@ public class Average {
             sum += arr[start];
         }
 
-        average = sum/arr.length;
+        average = sum / arr.length;
         System.out.println(average);
     }
 }
