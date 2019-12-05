@@ -1,8 +1,8 @@
 package car;
 
 public abstract class ElectricCar extends Engine {
-    double km;
-    double speed;
+    private double km;
+    private double speed;
     private double batterySize;
 
 
