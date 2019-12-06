@@ -1,7 +1,7 @@
 package car;
 
 public class Tesla extends ElectricCar {
-    String model;
+    private String model;
 
     public Tesla(String model, double capacity, double size) {
         setCapacity(capacity);

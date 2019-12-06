@@ -1,6 +1,7 @@
 package car;
 
-public abstract class ElectricCar extends Engine {
+public abstract class ElectricCar {
+    private Engine engine = new Engine();
     private double km;
     private double speed;
     private double batterySize;
@@ -8,28 +9,31 @@ public abstract class ElectricCar extends Engine {
 
     public double energyWasted() {
         double physics = 3;
-        double wasted = getKm() * physics * getCapacity() / 100;
+        double wasted = getKm() * physics * engine.getCapacity() / 100;
         if (getSpeed() >= 80) return wasted * 1.5;
         else return wasted;
     }
 
 
-    public boolean isEmpty() {
+    public void isEmpty() {
         if (energyWasted() >= getBatterySize()) {
-            System.out.println("Oh, you run out of battery ლ(ಠ_ಠლ)");
             shutDown();
-            return true;
-        } else return false;
+            System.out.println("Oh, you run out of battery ლ(ಠ_ಠლ)");
+        }
     }
 
     public void shutDown() {
-        setStarted(false);
+        if (engine.isStarted()) engine.setStarted(false);
     }
 
     public void startEngine() {
-        if (!isEmpty()) {
-            setStarted(true);
-        }
+        engine.setStarted(true);
+        isEmpty();
+    }
+
+
+    public void setCapacity(double capacity) {
+        engine.setCapacity(capacity);
     }
 
     public double getBatterySize() {
