@@ -1,7 +1,6 @@
 package shapes;
 
 public class Vertex {
-    Shape shape;
     private double x;
     private double y;
     private double z;
