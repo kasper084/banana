@@ -15,14 +15,12 @@ public class Rectangle extends PlaneShape {
 
     @Override
     public double getArea() {
-
-        return 0;
+        return getHeight() * getWidth();
     }
 
     @Override
     public double getPerimeter() {
-
-        return 0;
+        return 2 * (getHeight() + getWidth());
     }
 
     public double getWidth() {
