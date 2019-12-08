@@ -14,12 +14,12 @@ public class Sphere extends SpaceShape {
 
     @Override
     public double getArea() {
-        return 0;
+        return 4 * Math.PI * Math.pow(getRadius(), 2);
     }
 
     @Override
     public double getVolume() {
-        return 0;
+        return (4 * Math.PI * Math.pow(getRadius(), 3)) / 3;
     }
 
     public double getRadius() {

@@ -15,6 +15,18 @@ public class Triangle extends PlaneShape {
         add2DVtoAllV();
     }
 
+    @Override
+    public double getArea() {
+        double p = getPerimeter() / 2;
+        return Math.sqrt(p * (p - sideA()) * (p - sideB()) * (p - sideC()));
+    }
+
+    @Override
+    public double getPerimeter() {
+        return sideA() + sideB() + sideC();
+    }
+
+
     public double sideA() {
         double side = Math.pow(vertexB.getX() - vertexA.getX(), 2)
                 + Math.pow(vertexB.getY() - vertexA.getY(), 2);
@@ -31,16 +43,5 @@ public class Triangle extends PlaneShape {
         double side = Math.pow(vertexA.getX() - vertexC.getX(), 2)
                 + Math.pow(vertexA.getY() - vertexC.getY(), 2);
         return Math.sqrt(side);
-    }
-
-    @Override
-    public double getArea() {
-        double p = getPerimeter() / 2;
-        return Math.sqrt(p * (p - sideA()) * (p - sideB()) * (p - sideC()));
-    }
-
-    @Override
-    public double getPerimeter() {
-        return sideA() + sideB() + sideC();
     }
 }
