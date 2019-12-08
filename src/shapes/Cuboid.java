@@ -1,14 +1,14 @@
 package shapes;
 
-public class Cuboid extends SpaceShape{
-    double width;
-    double height;
-    double depth;
+public class Cuboid extends SpaceShape {
+    private Vertex vertex = new Vertex();
+    private double width;
+    private double height;
+    private double depth;
 
-    public Cuboid(double x1, double y1, double z1, double width, double height, double depth) {
-        Vertex vertexA = new Vertex();
-        vertexA.createVertex(x1, y1, z1);
-        getVertices3D().add(vertexA);
+    public Cuboid(double x, double y, double z, double width, double height, double depth) {
+        this.vertex.createVertex(x, y, z);
+        getVertices3D().add(vertex);
         this.width = width;
         this.height = height;
         this.depth = depth;
@@ -17,12 +17,16 @@ public class Cuboid extends SpaceShape{
 
     @Override
     public double getArea() {
-        return 0;
+        return 2 * getDepth() * getWidth()
+                + 2 * getHeight() * getDepth()
+                + 2 * getHeight() * getWidth();
     }
 
     @Override
     public double getVolume() {
-        return 0;
+        return getDepth()
+                * getHeight()
+                * getWidth();
     }
 
     public double getWidth() {
