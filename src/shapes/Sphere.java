@@ -1,24 +1,25 @@
 package shapes;
 
-public class Circle extends PlaneShape {
+public class Sphere extends SpaceShape {
+
     private Vertex vertex = new Vertex();
     private double radius;
 
-    public Circle(double x, double y, double radius) {
+    public Sphere(double x, double y, double radius) {
         this.vertex.createVertex(x, y);
         this.radius = radius;
-        getVertices2D().add(vertex);
-        add2DVtoAllV();
+        getVertices3D().add(vertex);
+        add3DVtoAllV();
     }
 
     @Override
     public double getArea() {
-        return Math.PI * Math.pow(getRadius(), 2);
+        return 0;
     }
 
     @Override
-    public double getPerimeter() {
-        return 2 * Math.PI * getRadius();
+    public double getVolume() {
+        return 0;
     }
 
     public double getRadius() {
