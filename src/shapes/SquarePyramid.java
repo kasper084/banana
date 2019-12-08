@@ -15,15 +15,28 @@ public class SquarePyramid extends SpaceShape {
 
     @Override
     public double getArea() {
-        return 0;
+        return getBaseArea() + getSideArea();
     }
 
     @Override
     public double getVolume() {
-        return (getBaseS() * getHeight()) / 3;
+        return (getBaseArea() * getHeight()) / 3;
     }
 
-    public double getBaseS() {
+    public double getSideArea() {
+        return (getBasePerimeter() * getApo()) / 2;
+    }
+
+    public double getApo() {
+        return Math.sqrt(Math.pow(getBaseWidth() / 2, 2)
+                + Math.pow(getHeight(), 2));
+    }
+
+    public double getBasePerimeter() {
+        return 4 * getBaseWidth();
+    }
+
+    public double getBaseArea() {
         return getBaseWidth() * getBaseWidth();
     }
 
