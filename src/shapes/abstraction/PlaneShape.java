@@ -1,7 +1,8 @@
-package shapes;
+package shapes.abstraction;
 
-import interfaces.AreaMeasurable;
-import interfaces.PerimeterMeasurable;
+import shapes.interfaces.AreaMeasurable;
+import shapes.interfaces.PerimeterMeasurable;
+import shapes.vertex.Vertex;
 
 import java.util.ArrayList;
 
@@ -15,4 +16,5 @@ public abstract class PlaneShape extends Shape implements PerimeterMeasurable, A
     public ArrayList<Vertex> getVertices2D() {
         return vertices2D;
     }
+
 }

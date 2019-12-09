@@ -1,7 +1,8 @@
-package shapes;
+package shapes.abstraction;
 
-import interfaces.AreaMeasurable;
-import interfaces.VolumeMeasurable;
+import shapes.interfaces.AreaMeasurable;
+import shapes.interfaces.VolumeMeasurable;
+import shapes.vertex.Vertex;
 
 import java.util.ArrayList;
 

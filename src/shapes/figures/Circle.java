@@ -1,4 +1,7 @@
-package shapes;
+package shapes.figures;
+
+import shapes.vertex.Vertex;
+import shapes.abstraction.PlaneShape;
 
 public class Circle extends PlaneShape {
     private final Vertex VERTEX = new Vertex();
@@ -19,6 +22,13 @@ public class Circle extends PlaneShape {
     @Override
     public double getPerimeter() {
         return 2 * Math.PI * getRadius();
+    }
+
+    public String getVertexValue() {
+        double x = VERTEX.getX();
+        double y = VERTEX.getY();
+        String value = "[" + x + " ; " + y + "]";
+        return value;
     }
 
     public double getRadius() {

@@ -1,8 +1,11 @@
 package shapes;
 
+import shapes.abstraction.Shape;
+import shapes.figures.*;
+
 import java.util.ArrayList;
 
-public abstract class Print {
+public class Print {
     public static void main(String[] args) {
         ArrayList<Shape> shapes = new ArrayList<>();
         SquarePyramid squarePyramid = new SquarePyramid(1,1,1, 7, 5);
@@ -17,16 +20,6 @@ public abstract class Print {
         shapes.add(triangle);
         shapes.add(circle);
         shapes.add(rectangle);
-
-
-
-        /*System.out.println(circle.getPerimeter() + " " + circle.getArea());
-        System.out.println(Math.round(triangle.getPerimeter()));
-        System.out.println(Math.round(triangle.getArea()));
-        System.out.println(cuboid.getArea() + " " + cuboid.getVolume());
-        System.out.println(rectangle.getArea() + " " + rectangle.getPerimeter());
-        System.out.println(squarePyramid.getArea() + " " + squarePyramid.getSideArea() + " "
-                + squarePyramid.getBaseArea());
-        System.out.println(sphere.getArea() + " " + sphere.getVolume());*/
+        System.out.println(rectangle);
     }
 }

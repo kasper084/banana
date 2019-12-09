@@ -1,4 +1,7 @@
-package shapes;
+package shapes.figures;
+
+import shapes.vertex.Vertex;
+import shapes.abstraction.SpaceShape;
 
 public class Cuboid extends SpaceShape {
     private final Vertex VERTEX = new Vertex();
@@ -27,6 +30,13 @@ public class Cuboid extends SpaceShape {
         return getDepth()
                 * getHeight()
                 * getWidth();
+    }
+
+    public String getVertexValue() {
+        double x = VERTEX.getX();
+        double y = VERTEX.getY();
+        String value = "[" + x + " ; " + y + "]";
+        return value;
     }
 
     public double getWidth() {

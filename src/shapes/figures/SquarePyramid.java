@@ -1,4 +1,7 @@
-package shapes;
+package shapes.figures;
+
+import shapes.vertex.Vertex;
+import shapes.abstraction.SpaceShape;
 
 public class SquarePyramid extends SpaceShape {
     private final Vertex VERTEX = new Vertex();

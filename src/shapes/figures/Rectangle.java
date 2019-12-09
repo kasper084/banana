@@ -1,4 +1,7 @@
-package shapes;
+package shapes.figures;
+
+import shapes.vertex.Vertex;
+import shapes.abstraction.PlaneShape;
 
 public class Rectangle extends PlaneShape {
     private final Vertex VERTEX = new Vertex();
@@ -21,6 +24,25 @@ public class Rectangle extends PlaneShape {
     @Override
     public double getPerimeter() {
         return 2 * (getHeight() + getWidth());
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()
+                + "P = "
+                + getPerimeter()
+                + ", S = "
+                + getArea()
+                + ", XY "
+                + getVertexValue();
+    }
+
+
+    public String getVertexValue() {
+        double x = VERTEX.getX();
+        double y = VERTEX.getY();
+        String value = "[" + x + " ; " + y + "]";
+        return value;
     }
 
     public double getWidth() {

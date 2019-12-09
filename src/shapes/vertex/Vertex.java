@@ -1,4 +1,4 @@
-package shapes;
+package shapes.vertex;
 
 public class Vertex {
     private double x;

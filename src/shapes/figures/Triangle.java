@@ -1,4 +1,7 @@
-package shapes;
+package shapes.figures;
+
+import shapes.vertex.Vertex;
+import shapes.abstraction.PlaneShape;
 
 public class Triangle extends PlaneShape {
     private final Vertex VERTEX_A = new Vertex();
@@ -26,6 +29,21 @@ public class Triangle extends PlaneShape {
         return sideA() + sideB() + sideC();
     }
 
+    @Override
+    public String toString() {
+        return super.toString()
+                + "P"
+                + getPerimeter()
+                + " S"
+                + getArea()
+                + " x1 "
+                + VERTEX_A.getX()
+                + " y1 "
+                + VERTEX_A.getY();
+
+    }
+
+
 
     public double sideA() {
         double side = Math.pow(VERTEX_B.getX() - VERTEX_A.getX(), 2)
@@ -44,4 +62,5 @@ public class Triangle extends PlaneShape {
                 + Math.pow(VERTEX_A.getY() - VERTEX_C.getY(), 2);
         return Math.sqrt(side);
     }
+
 }

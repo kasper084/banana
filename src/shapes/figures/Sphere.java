@@ -1,4 +1,7 @@
-package shapes;
+package shapes.figures;
+
+import shapes.vertex.Vertex;
+import shapes.abstraction.SpaceShape;
 
 public class Sphere extends SpaceShape {
 
@@ -20,6 +23,13 @@ public class Sphere extends SpaceShape {
     @Override
     public double getVolume() {
         return (4 * Math.PI * Math.pow(getRadius(), 3)) / 3;
+    }
+
+    public String getVertexValue() {
+        double x = VERTEX.getX();
+        double y = VERTEX.getY();
+        String value = "[" + x + " ; " + y + "]";
+        return value;
     }
 
     public double getRadius() {
