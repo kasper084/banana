@@ -2,14 +2,14 @@ package shapes;
 
 public class Sphere extends SpaceShape {
 
-    private Vertex vertex = new Vertex();
+    private final Vertex VERTEX = new Vertex();
     private double radius;
 
     public Sphere(double x, double y, double radius) {
-        this.vertex.createVertex(x, y);
-        this.radius = radius;
-        getVertices3D().add(vertex);
+        VERTEX.createVertex(x, y);
+        getVertices3D().add(VERTEX);
         add3DVtoAllV();
+        this.radius = radius;
     }
 
     @Override

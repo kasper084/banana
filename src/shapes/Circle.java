@@ -1,14 +1,14 @@
 package shapes;
 
 public class Circle extends PlaneShape {
-    private Vertex vertex = new Vertex();
+    private final Vertex VERTEX = new Vertex();
     private double radius;
 
     public Circle(double x, double y, double radius) {
-        this.vertex.createVertex(x, y);
-        this.radius = radius;
-        getVertices2D().add(vertex);
+        VERTEX.createVertex(x, y);
+        getVertices2D().add(VERTEX);
         add2DVtoAllV();
+        this.radius = radius;
     }
 
     @Override

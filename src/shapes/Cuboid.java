@@ -1,18 +1,18 @@
 package shapes;
 
 public class Cuboid extends SpaceShape {
-    private Vertex vertex = new Vertex();
+    private final Vertex VERTEX = new Vertex();
     private double width;
     private double height;
     private double depth;
 
     public Cuboid(double x, double y, double z, double width, double height, double depth) {
-        this.vertex.createVertex(x, y, z);
-        getVertices3D().add(vertex);
+        VERTEX.createVertex(x, y, z);
+        getVertices3D().add(VERTEX);
+        add3DVtoAllV();
         this.width = width;
         this.height = height;
         this.depth = depth;
-        add3DVtoAllV();
     }
 
     @Override

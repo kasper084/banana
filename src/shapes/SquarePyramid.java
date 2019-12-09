@@ -1,16 +1,16 @@
 package shapes;
 
 public class SquarePyramid extends SpaceShape {
-    private Vertex vertex = new Vertex();
+    private final Vertex VERTEX = new Vertex();
     private double baseWidth;
     private double height;
 
     public SquarePyramid(double x, double y, double z, double width, double height) {
-        this.vertex.createVertex(x, y, z);
-        getVertices3D().add(vertex);
+        VERTEX.createVertex(x, y, z);
+        getVertices3D().add(VERTEX);
+        add3DVtoAllV();
         this.baseWidth = width;
         this.height = height;
-        add3DVtoAllV();
     }
 
     @Override

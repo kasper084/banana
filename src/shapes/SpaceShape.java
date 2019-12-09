@@ -9,9 +9,7 @@ public abstract class SpaceShape extends Shape implements VolumeMeasurable, Area
     private ArrayList<Vertex> vertices3D = new ArrayList<>();
 
     public void add3DVtoAllV() {
-        for (Vertex vertex : vertices3D) {
-            getVerticesList().add(vertex);
-        }
+        for (Vertex vertex : vertices3D) getVerticesList().add(vertex);
     }
 
     public ArrayList<Vertex> getVertices3D() {

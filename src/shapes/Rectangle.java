@@ -1,16 +1,16 @@
 package shapes;
 
 public class Rectangle extends PlaneShape {
-    private Vertex vertex = new Vertex();
+    private final Vertex VERTEX = new Vertex();
     private double width;
     private double height;
 
     public Rectangle(double x, double y, double width, double height) {
-        this.vertex.createVertex(x, y);
+        VERTEX.createVertex(x, y);
+        getVertices2D().add(VERTEX);
+        add2DVtoAllV();
         this.width = width;
         this.height = height;
-        getVertices2D().add(vertex);
-        add2DVtoAllV();
     }
 
     @Override

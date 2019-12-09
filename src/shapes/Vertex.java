@@ -16,6 +16,7 @@ public class Vertex {
         setY(y);
     }
 
+
     public double getX() {
         return x;
     }
