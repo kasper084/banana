@@ -32,6 +32,17 @@ public class Cuboid extends SpaceShape {
                 * getWidth();
     }
 
+    @Override
+    public String toString() {
+        return super.toString()
+                + "S = "
+                + Math.floor(getArea())
+                + ", V = "
+                + Math.floor(getVolume())
+                + ", XY "
+                + getVertexValue();
+    }
+
     public String getVertexValue() {
         double x = VERTEX.getX();
         double y = VERTEX.getY();

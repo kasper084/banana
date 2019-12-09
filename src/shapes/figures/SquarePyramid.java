@@ -26,6 +26,24 @@ public class SquarePyramid extends SpaceShape {
         return (getBaseArea() * getHeight()) / 3;
     }
 
+    @Override
+    public String toString() {
+        return super.toString()
+                + "full S = "
+                + Math.floor(getArea())
+                + ", V = "
+                + Math.floor(getVolume())
+                + ", XY "
+                + getVertexValue();
+    }
+
+    public String getVertexValue() {
+        double x = VERTEX.getX();
+        double y = VERTEX.getY();
+        String value = "[" + x + " ; " + y + "]";
+        return value;
+    }
+
     public double getSideArea() {
         return (getBasePerimeter() * getApo()) / 2;
     }

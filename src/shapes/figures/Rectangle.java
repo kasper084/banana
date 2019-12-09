@@ -30,9 +30,9 @@ public class Rectangle extends PlaneShape {
     public String toString() {
         return super.toString()
                 + "P = "
-                + getPerimeter()
+                + Math.floor(getPerimeter())
                 + ", S = "
-                + getArea()
+                + Math.floor(getArea())
                 + ", XY "
                 + getVertexValue();
     }

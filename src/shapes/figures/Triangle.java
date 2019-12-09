@@ -32,18 +32,26 @@ public class Triangle extends PlaneShape {
     @Override
     public String toString() {
         return super.toString()
-                + "P"
-                + getPerimeter()
-                + " S"
-                + getArea()
-                + " x1 "
-                + VERTEX_A.getX()
-                + " y1 "
-                + VERTEX_A.getY();
-
+                + "P = "
+                + Math.floor(getPerimeter())
+                + ", S = "
+                + Math.floor(getArea())
+                + ", XY "
+                + getVertexValue();
     }
 
-
+    public String getVertexValue() {
+        double x1 = VERTEX_A.getX();
+        double y1 = VERTEX_A.getY();
+        double x2 = VERTEX_B.getX();
+        double y2 = VERTEX_B.getY();
+        double x3 = VERTEX_C.getX();
+        double y3 = VERTEX_C.getY();
+        String value = "[" + x1 + " ; " + y1 + "]"
+                + "[" + x2 + " ; " + y2 + "]"
+                + "[" + x3 + " ; " + y3 + "]";
+        return value;
+    }
 
     public double sideA() {
         double side = Math.pow(VERTEX_B.getX() - VERTEX_A.getX(), 2)
@@ -62,5 +70,4 @@ public class Triangle extends PlaneShape {
                 + Math.pow(VERTEX_A.getY() - VERTEX_C.getY(), 2);
         return Math.sqrt(side);
     }
-
 }

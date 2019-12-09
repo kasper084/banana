@@ -24,6 +24,18 @@ public class Circle extends PlaneShape {
         return 2 * Math.PI * getRadius();
     }
 
+    @Override
+    public String toString() {
+        return super.toString()
+                + "P = "
+                + Math.floor(getPerimeter())
+                + ", S = "
+                + Math.floor(getArea())
+                + ", XY "
+                + getVertexValue();
+    }
+
+
     public String getVertexValue() {
         double x = VERTEX.getX();
         double y = VERTEX.getY();
