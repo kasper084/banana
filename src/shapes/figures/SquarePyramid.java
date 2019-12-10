@@ -29,18 +29,19 @@ public class SquarePyramid extends SpaceShape {
     @Override
     public String toString() {
         return super.toString()
-                + "full S = "
+                + "S = "
                 + Math.floor(getArea())
                 + ", V = "
                 + Math.floor(getVolume())
-                + ", XY "
+                + ", XYZ "
                 + getVertexValue();
     }
 
     public String getVertexValue() {
         double x = VERTEX.getX();
         double y = VERTEX.getY();
-        String value = "[" + x + " ; " + y + "]";
+        double z = VERTEX.getZ();
+        String value = "[" + x + "; " + y + "; " + z + "]";
         return value;
     }
 

@@ -39,14 +39,15 @@ public class Cuboid extends SpaceShape {
                 + Math.floor(getArea())
                 + ", V = "
                 + Math.floor(getVolume())
-                + ", XY "
+                + ", XYZ "
                 + getVertexValue();
     }
 
     public String getVertexValue() {
         double x = VERTEX.getX();
         double y = VERTEX.getY();
-        String value = "[" + x + " ; " + y + "]";
+        double z = VERTEX.getZ();
+        String value = "[" + x + "; " + y + "; " + z + "]";
         return value;
     }
 
