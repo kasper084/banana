@@ -35,7 +35,6 @@ public class Circle extends PlaneShape {
                 + getVertexValue();
     }
 
-
     public String getVertexValue() {
         double x = VERTEX.getX();
         double y = VERTEX.getY();
