@@ -21,6 +21,8 @@ public class Print {
         shapes.add(circle);
         shapes.add(rectangle);
 
+        System.out.println();
+
         for (Shape shape : shapes) {
             System.out.println(shape);
         }
