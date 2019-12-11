@@ -1,6 +1,7 @@
 package shapes.abstraction;
 
 import shapes.vertex.Vertex;
+
 import java.util.ArrayList;
 import java.util.List;
 

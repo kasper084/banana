@@ -51,7 +51,7 @@ public class Triangle extends PlaneShape {
     }
 
     public double sideC() {
-        double side = Math.pow(vertexA.getX() -vertexC .getX(), 2)
+        double side = Math.pow(vertexA.getX() - vertexC.getX(), 2)
                 + Math.pow(vertexA.getY() - vertexC.getY(), 2);
         return Math.sqrt(side);
     }

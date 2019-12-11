@@ -1,13 +1,12 @@
-package shapes;
+package shapes.figures;
 
 import shapes.abstraction.Shape;
-import shapes.figures.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Print {
-    public static void main(String[] args) {
+public class FiguresList {
+    public void print() {
         List<Shape> shapes = new ArrayList<>();
         SquarePyramid squarePyramid = new SquarePyramid(1, 1, 1, 7, 5);
         Cuboid cuboid = new Cuboid(1, 2, 9, 7, 9, 5);
