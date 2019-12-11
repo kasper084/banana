@@ -1,20 +1,20 @@
 package shapes.figures;
 
-import shapes.vertex.Vertex;
 import shapes.abstraction.PlaneShape;
+import shapes.vertex.Vertex2D;
 
 public class Triangle extends PlaneShape {
-    private final Vertex VERTEX_A = new Vertex();
-    private final Vertex VERTEX_B = new Vertex();
-    private final Vertex VERTEX_C = new Vertex();
+    private final Vertex2D vertexA = new Vertex2D();
+    private final Vertex2D vertexB = new Vertex2D();
+    private final Vertex2D vertexC = new Vertex2D();
 
     public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
-        VERTEX_A.createVertex(x1, y1);
-        VERTEX_B.createVertex(x2, y2);
-        VERTEX_C.createVertex(x3, y3);
-        getVertices2D().add(VERTEX_A);
-        getVertices2D().add(VERTEX_B);
-        getVertices2D().add(VERTEX_C);
+        vertexA.createVertex(x1, y1);
+        vertexB.createVertex(x2, y2);
+        vertexC.createVertex(x3, y3);
+        getVertices2D().add(vertexA);
+        getVertices2D().add(vertexB);
+        getVertices2D().add(vertexC);
         add2DVtoAllV();
     }
 
@@ -32,42 +32,27 @@ public class Triangle extends PlaneShape {
     @Override
     public String toString() {
         return super.toString()
-                + "P = "
+                + " P = "
                 + Math.floor(getPerimeter())
                 + ", S = "
-                + Math.floor(getArea())
-                + ", XY "
-                + getVertexValue();
-    }
-
-    public String getVertexValue() {
-        double x1 = VERTEX_A.getX();
-        double y1 = VERTEX_A.getY();
-        double x2 = VERTEX_B.getX();
-        double y2 = VERTEX_B.getY();
-        double x3 = VERTEX_C.getX();
-        double y3 = VERTEX_C.getY();
-        String value = "[" + x1 + " ; " + y1 + "]"
-                + "[" + x2 + " ; " + y2 + "]"
-                + "[" + x3 + " ; " + y3 + "]";
-        return value;
+                + Math.floor(getArea());
     }
 
     public double sideA() {
-        double side = Math.pow(VERTEX_B.getX() - VERTEX_A.getX(), 2)
-                + Math.pow(VERTEX_B.getY() - VERTEX_A.getY(), 2);
+        double side = Math.pow(vertexB.getX() - vertexA.getX(), 2)
+                + Math.pow(vertexB.getY() - vertexA.getY(), 2);
         return Math.sqrt(side);
     }
 
     public double sideB() {
-        double side = Math.pow(VERTEX_C.getX() - VERTEX_B.getX(), 2)
-                + Math.pow(VERTEX_C.getY() - VERTEX_B.getY(), 2);
+        double side = Math.pow(vertexC.getX() - vertexB.getX(), 2)
+                + Math.pow(vertexC.getY() - vertexB.getY(), 2);
         return Math.sqrt(side);
     }
 
     public double sideC() {
-        double side = Math.pow(VERTEX_A.getX() - VERTEX_C.getX(), 2)
-                + Math.pow(VERTEX_A.getY() - VERTEX_C.getY(), 2);
+        double side = Math.pow(vertexA.getX() -vertexC .getX(), 2)
+                + Math.pow(vertexA.getY() - vertexC.getY(), 2);
         return Math.sqrt(side);
     }
 }

@@ -1,17 +1,17 @@
 package shapes.figures;
 
-import shapes.vertex.Vertex;
 import shapes.abstraction.SpaceShape;
+import shapes.vertex.Vertex3D;
 
 public class Cuboid extends SpaceShape {
-    private final Vertex VERTEX = new Vertex();
+    private final Vertex3D vertex = new Vertex3D();
     private double width;
     private double height;
     private double depth;
 
     public Cuboid(double x, double y, double z, double width, double height, double depth) {
-        VERTEX.createVertex(x, y, z);
-        getVertices3D().add(VERTEX);
+        vertex.create3DVertex(x, y, z);
+        getVertices3D().add(vertex);
         add3DVtoAllV();
         this.width = width;
         this.height = height;
@@ -20,9 +20,7 @@ public class Cuboid extends SpaceShape {
 
     @Override
     public double getArea() {
-        return 2 * getDepth() * getWidth()
-                + 2 * getHeight() * getDepth()
-                + 2 * getHeight() * getWidth();
+        return (getWidth() * getHeight() + getWidth() * getDepth() + getHeight() * getDepth() * 2);
     }
 
     @Override
@@ -35,20 +33,10 @@ public class Cuboid extends SpaceShape {
     @Override
     public String toString() {
         return super.toString()
-                + "S = "
+                + " S = "
                 + Math.floor(getArea())
                 + ", V = "
-                + Math.floor(getVolume())
-                + ", XYZ "
-                + getVertexValue();
-    }
-
-    public String getVertexValue() {
-        double x = VERTEX.getX();
-        double y = VERTEX.getY();
-        double z = VERTEX.getZ();
-        String value = "[" + x + "; " + y + "; " + z + "]";
-        return value;
+                + Math.floor(getVolume());
     }
 
     public double getWidth() {

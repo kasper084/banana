@@ -1,22 +1,22 @@
 package shapes.abstraction;
 
 import shapes.vertex.Vertex;
-
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Shape {
-    private ArrayList<Vertex> verticesList = new ArrayList<>();
+    List<Vertex> verticesList = new ArrayList<>();
 
-    public ArrayList<Vertex> getVerticesList() {
+    public List<Vertex> getVerticesList() {
         return verticesList;
     }
-
 
     @Override
     public String toString() {
         return getClass().getSuperclass().getSimpleName()
                 + "-"
                 + getClass().getSimpleName()
-                + ": ";
+                + ": "
+                + getVerticesList().toString();
     }
 }

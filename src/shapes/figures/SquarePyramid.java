@@ -1,16 +1,16 @@
 package shapes.figures;
 
-import shapes.vertex.Vertex;
+import shapes.vertex.Vertex3D;
 import shapes.abstraction.SpaceShape;
 
 public class SquarePyramid extends SpaceShape {
-    private final Vertex VERTEX = new Vertex();
+    private final Vertex3D vertex = new Vertex3D();
     private double baseWidth;
     private double height;
 
     public SquarePyramid(double x, double y, double z, double width, double height) {
-        VERTEX.createVertex(x, y, z);
-        getVertices3D().add(VERTEX);
+        vertex.create3DVertex(x, y, z);
+        getVertices3D().add(vertex);
         add3DVtoAllV();
         this.baseWidth = width;
         this.height = height;
@@ -29,20 +29,10 @@ public class SquarePyramid extends SpaceShape {
     @Override
     public String toString() {
         return super.toString()
-                + "S = "
+                + " S = "
                 + Math.floor(getArea())
                 + ", V = "
-                + Math.floor(getVolume())
-                + ", XYZ "
-                + getVertexValue();
-    }
-
-    public String getVertexValue() {
-        double x = VERTEX.getX();
-        double y = VERTEX.getY();
-        double z = VERTEX.getZ();
-        String value = "[" + x + "; " + y + "; " + z + "]";
-        return value;
+                + Math.floor(getVolume());
     }
 
     public double getSideArea() {

@@ -1,16 +1,16 @@
 package shapes.figures;
 
-import shapes.vertex.Vertex;
+import shapes.vertex.Vertex2D;
 import shapes.abstraction.PlaneShape;
 
 public class Rectangle extends PlaneShape {
-    private final Vertex VERTEX = new Vertex();
+    private final Vertex2D vertex = new Vertex2D();
     private double width;
     private double height;
 
     public Rectangle(double x, double y, double width, double height) {
-        VERTEX.createVertex(x, y);
-        getVertices2D().add(VERTEX);
+        vertex.createVertex(x, y);
+        getVertices2D().add(vertex);
         add2DVtoAllV();
         this.width = width;
         this.height = height;
@@ -29,20 +29,10 @@ public class Rectangle extends PlaneShape {
     @Override
     public String toString() {
         return super.toString()
-                + "P = "
+                + " P = "
                 + Math.floor(getPerimeter())
                 + ", S = "
-                + Math.floor(getArea())
-                + ", XY "
-                + getVertexValue();
-    }
-
-
-    public String getVertexValue() {
-        double x = VERTEX.getX();
-        double y = VERTEX.getY();
-        String value = "[" + x + " ; " + y + "]";
-        return value;
+                + Math.floor(getArea());
     }
 
     public double getWidth() {

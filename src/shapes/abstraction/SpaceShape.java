@@ -2,18 +2,19 @@ package shapes.abstraction;
 
 import shapes.interfaces.AreaMeasurable;
 import shapes.interfaces.VolumeMeasurable;
-import shapes.vertex.Vertex;
+import shapes.vertex.Vertex3D;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class SpaceShape extends Shape implements VolumeMeasurable, AreaMeasurable {
-    private ArrayList<Vertex> vertices3D = new ArrayList<>();
+    List<Vertex3D> vertices = new ArrayList<>();
 
     public void add3DVtoAllV() {
-        for (Vertex vertex : vertices3D) getVerticesList().add(vertex);
+        for (Vertex3D vertex : vertices) getVerticesList().add(vertex);
     }
 
-    public ArrayList<Vertex> getVertices3D() {
-        return vertices3D;
+    public List<Vertex3D> getVertices3D() {
+        return vertices;
     }
 }
