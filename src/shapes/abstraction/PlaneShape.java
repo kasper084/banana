@@ -16,5 +16,4 @@ public abstract class PlaneShape extends Shape implements PerimeterMeasurable, A
     public ArrayList<Vertex2D> getVertices2D() {
         return vertices;
     }
-
 }
