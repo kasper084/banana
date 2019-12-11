@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Shape {
-    List<Vertex> verticesList = new ArrayList<>();
+    private List<Vertex> verticesList = new ArrayList<>();
 
     public List<Vertex> getVerticesList() {
         return verticesList;

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class SpaceShape extends Shape implements VolumeMeasurable, AreaMeasurable {
-    List<Vertex3D> vertices = new ArrayList<>();
+    private List<Vertex3D> vertices = new ArrayList<>();
 
     public void add3DVtoAllV() {
         for (Vertex3D vertex : vertices) getVerticesList().add(vertex);
