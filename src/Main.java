@@ -1,6 +1,11 @@
+import first.FirstListOfGenericT;
+import second.SecondListOfGenericT;
+
 public class Main {
     public static void main(String[] args) {
-        ListsOfT lists = new ListsOfT();
-        lists.print();
+        FirstListOfGenericT firstList = new FirstListOfGenericT();
+        SecondListOfGenericT secondList = new SecondListOfGenericT();
+        firstList.print();
+        secondList.print();
     }
 }

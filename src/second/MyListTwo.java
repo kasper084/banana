@@ -1,14 +1,16 @@
+package second;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyList<T extends Comparable> {
+public class MyListTwo<T extends Comparable> {
     private List<T> listOfT = new ArrayList<>();
 
     public void add(T some) {
         getListOfT().add(some);
     }
 
-    public <Z extends Comparable<? super Z>> Z largest(MyList<Z> list) {
+    public <Z extends Comparable<? super Z>> Z largest(MyListTwo<Z> list) {
         Z some = list.get(0);
         for (int element = 1; element < list.size(); element++) {
             if (some.compareTo(list.get(element)) < 0) some = list.get(element);
@@ -16,7 +18,7 @@ public class MyList<T extends Comparable> {
         return some;
     }
 
-    public <Z extends Comparable<? super Z>> Z smallest(MyList<Z> list) {
+    public <Z extends Comparable<? super Z>> Z smallest(MyListTwo<Z> list) {
         Z some = list.get(0);
         for (int element = 1; element < list.size(); element++) {
             if (some.compareTo(list.get(element)) > 0) some = list.get(element);
