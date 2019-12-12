@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyListOne<T extends Number> {
-    List<T> listOfT = new ArrayList<>();
+    private List<T> listOfT = new ArrayList<>();
 
     public void add(T some) {
         listOfT.add(some);
