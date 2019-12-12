@@ -13,7 +13,7 @@ public class MyListOne<T extends Number> {
     public T largest() {
         T some = getListOfT().get(0);
         for (int element = 1; element < getListOfT().size(); element++) {
-            if (getListOfT().get(element).doubleValue() > some.doubleValue()) {
+            if (getListOfT().get(element).intValue() > some.intValue()) {
                 some = getListOfT().get(element);
             }
         }
@@ -23,7 +23,7 @@ public class MyListOne<T extends Number> {
     public T smallest() {
         T some = getListOfT().get(0);
         for (int element = 1; element < getListOfT().size(); element++) {
-            if (getListOfT().get(element).doubleValue() < some.doubleValue()) {
+            if (getListOfT().get(element).intValue() < some.intValue()) {
                 some = getListOfT().get(element);
             }
         }
