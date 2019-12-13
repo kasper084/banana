@@ -7,8 +7,8 @@ public class FirstListOfGenericT {
         integerList.add(15);
         integerList.add(25);
 
-        System.out.println("largest: " + integerList.largest());
-        System.out.println("smallest: " + integerList.smallest());
+        System.out.println("largest: " + integerList.getLargestValue());
+        System.out.println("smallest: " + integerList.getSmallestValue());
         System.out.println();
     }
 }

@@ -10,20 +10,20 @@ public class MyListOne<T extends Number> {
         listOfT.add(some);
     }
 
-    public T largest() {
+    public T getLargestValue() {
         T some = getListOfT().get(0);
         for (int element = 1; element < getListOfT().size(); element++) {
-            if (getListOfT().get(element).intValue() > some.intValue()) {
+            if (getListOfT().get(element).doubleValue() > some.doubleValue()) {
                 some = getListOfT().get(element);
             }
         }
         return some;
     }
 
-    public T smallest() {
+    public T getSmallestValue() {
         T some = getListOfT().get(0);
         for (int element = 1; element < getListOfT().size(); element++) {
-            if (getListOfT().get(element).intValue() < some.intValue()) {
+            if (getListOfT().get(element).doubleValue() < some.doubleValue()) {
                 some = getListOfT().get(element);
             }
         }

@@ -12,7 +12,7 @@ public class SecondListOfGenericT {
         stringList.add("random");
         stringList.add("text");
 
-        System.out.println("use method - smallest() on Strings: " + stringList.smallest(stringList));
-        System.out.println("largest: " + integerList.largest(integerList));
+        System.out.println("use method - smallest() on Strings: " + stringList.getSmallestValue(stringList));
+        System.out.println("largest: " + integerList.getLargestValue(integerList));
     }
 }
