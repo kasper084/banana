@@ -1,13 +1,22 @@
-
-import java.util.ArrayList;
 import java.util.List;
 
-public class FruitList{
-    public void addFruits() {
-        List<String> fruits = new ArrayList<>();
-        fruits.add("Banana");
-        fruits.add("Avocado");
-        fruits.add("Apple");
+public class FruitList {
+    private List<String> fruitsList;
+
+    public FruitList(List<String> fruits) {
+        fruitsList = fruits;
+    }
+
+    public void checkFruits() {
+        String grapefruit = "Grapefruit";
+        String orange = "Orange";
+        if (!getFruitsList().contains(grapefruit)) {
+            if (getFruitsList().contains(orange)) getFruitsList().set(getFruitsList().indexOf(orange), grapefruit);
+        }
+        System.out.println(getFruitsList());
+    }
+
+    public List<String> getFruitsList() {
+        return this.fruitsList;
     }
 }
-

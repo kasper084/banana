@@ -17,6 +17,11 @@ public class RemoveDivisibleByThree {
         System.out.println(getList());
     }
 
+    public void removeWithRemoveIf() {
+        getList().removeIf(element -> element % 3 == 0);
+        System.out.println(getList());
+    }
+
     public List<Integer> getList() {
         return this.integerList;
     }
