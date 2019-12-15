@@ -8,17 +8,19 @@ public class FruitsMatch {
     }
 
     public void searchForMatch() {
-        if (getFruitListNumberOne().getFruitsList().size() == getFruitListNumberTwo().getFruitsList().size()) {
-            for (int some = 0; some < getFruitListNumberOne().getFruitsList().size(); some++) {
-                if (getFruitListNumberTwo().getFruitsList().contains(getFruitListNumberOne().getFruitsList().get(some))) {
-                    System.out.printf("Perfect match for %s and %s%n",
-                            getFruitListNumberOne().getFruitsList().get(some),
-                            getFruitListNumberTwo().getFruitsList().get(some));
-                } else {
-                    System.out.printf("Sadly no match for %s and %s%n",
-                            getFruitListNumberOne().getFruitsList().get(some),
-                            getFruitListNumberTwo().getFruitsList().get(some));
-                }
+        for (String element : getFruitListNumberOne().getFruitsList()) {
+            int index = getFruitListNumberOne().getFruitsList().indexOf(element);
+            if (getFruitListNumberTwo().getFruitsList().contains(element)) {
+                int some = getFruitListNumberTwo().getFruitsList().indexOf(element);
+                System.out.println("Prefect match for "
+                        + element
+                        + " and "
+                        + getFruitListNumberTwo().getFruitsList().get(some));
+            } else {
+                System.out.println("Sadly no match for "
+                        + element
+                        + " and "
+                        + getFruitListNumberTwo().getFruitsList().get(index));
             }
         }
     }
