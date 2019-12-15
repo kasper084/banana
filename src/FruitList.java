@@ -1,6 +1,8 @@
 import java.util.List;
 
-public class FruitList {
+public class
+
+FruitList {
     private List<String> fruitsList;
 
     public FruitList(List<String> fruits) {

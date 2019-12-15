@@ -8,6 +8,7 @@ public class Main {
         FruitsMatch fruitsMatch = new FruitsMatch(fruitListNumberOne, fruitListNumberTwo);
         FruitTree fruitTree = new FruitTree(fruitListNumberTwo);
 
+
         removeDivisibleByThree.remove();
         removeDivisibleByThree.removeWithRemoveIf();
         fruitListNumberOne.checkFruits();
