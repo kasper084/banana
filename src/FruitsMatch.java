@@ -15,7 +15,7 @@ public class FruitsMatch {
                             getFruitListNumberOne().getFruitsList().get(some),
                             getFruitListNumberTwo().getFruitsList().get(some));
                 } else {
-                    System.out.printf("Sadly match for %s and %s%n",
+                    System.out.printf("Sadly no match for %s and %s%n",
                             getFruitListNumberOne().getFruitsList().get(some),
                             getFruitListNumberTwo().getFruitsList().get(some));
                 }

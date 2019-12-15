@@ -4,7 +4,7 @@ public class FruitList {
     private List<String> fruitsList;
 
     public FruitList(List<String> fruits) {
-        fruitsList = fruits;
+        this.fruitsList = fruits;
     }
 
     public void checkFruits() {
@@ -17,6 +17,6 @@ public class FruitList {
     }
 
     public List<String> getFruitsList() {
-        return this.fruitsList;
+        return fruitsList;
     }
 }
