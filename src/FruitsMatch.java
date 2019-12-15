@@ -7,7 +7,6 @@ public class FruitsMatch {
         this.fruitListNumberTwo = fruitListNumberTwo;
     }
 
-
     public void searchForMatch() {
         if (getFruitListNumberOne().getFruitsList().size() == getFruitListNumberTwo().getFruitsList().size()) {
             for (int some = 0; some < getFruitListNumberOne().getFruitsList().size(); some++) {

@@ -5,8 +5,6 @@ import java.util.List;
 public class RemoveDivisibleByThree {
     List<Integer> integerList = new ArrayList<>(Arrays.asList(3, 9, 11, 18, 20, 22));
 
-
-
     public void remove() {
         int some = getList().size();
         for (int element = 0; element < some; element++) {
