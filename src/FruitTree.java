@@ -3,30 +3,23 @@ import java.util.TreeSet;
 
 public class FruitTree {
 
-    private SortedSet<FruitList> fruitListSortedSet = new TreeSet<>(new DescendingComparator());
+    private SortedSet<String> fruitListSortedSet = new TreeSet<>(new DescendingComparator());
 
     public FruitTree(FruitList fruitList) {
-        getFruitListSortedSet().add(fruitList);
+        for (int element = 0; element < fruitList.getFruitsList().size(); element++) {
+            String some = fruitList.getFruitsList().get(element);
+            getFruitListSortedSet().add(some);
+        }
     }
 
-
-    public SortedSet<FruitList> getFruitListSortedSet() {
+    public SortedSet<String> getFruitListSortedSet() {
         return this.fruitListSortedSet;
     }
 
-    public String getStringValue(FruitList fruitList) {
-        String some = null;
-        for (int element = 0; element < fruitList.getFruitsList().size(); element++) {
-            some = fruitList.getFruitsList().get(element);
-        }
-        return some;
-    }
-
     public void print() {
-        for (FruitList some :
+        for (String some :
                 getFruitListSortedSet()) {
             System.out.println(some);
         }
     }
-
 }

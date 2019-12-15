@@ -1,9 +1,9 @@
 import java.util.Comparator;
 
-public class DescendingComparator implements Comparator<FruitList> {
+public class DescendingComparator implements Comparator<String> {
 
     @Override
-    public int compare(FruitList first, FruitList second) {
-        return 0;
+    public int compare(String first, String second) {
+        return second.compareTo(first);
     }
 }
