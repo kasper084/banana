@@ -5,15 +5,11 @@ public class FruitTree {
 
     private SortedSet<String> fruitListSortedSet = new TreeSet<>(new DescendingComparator());
 
-    public FruitTree(FruitList fruitList) {
+    public void add(FruitList fruitList) {
         for (int element = 0; element < fruitList.getFruitsList().size(); element++) {
             String some = fruitList.getFruitsList().get(element);
             getFruitListSortedSet().add(some);
         }
-    }
-
-    public SortedSet<String> getFruitListSortedSet() {
-        return this.fruitListSortedSet;
     }
 
     public void print() {
@@ -21,5 +17,9 @@ public class FruitTree {
                 getFruitListSortedSet()) {
             System.out.println(some);
         }
+    }
+
+    public SortedSet<String> getFruitListSortedSet() {
+        return this.fruitListSortedSet;
     }
 }

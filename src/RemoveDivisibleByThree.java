@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class RemoveDivisibleByThree {
-    private List<Integer> integerList = new ArrayList<>(Arrays.asList(3, 9, 11, 18, 20, 22));
+    private List<Integer> list = new ArrayList<>(Arrays.asList(3, 9, 11, 18, 20, 22));
 
     public void remove() {
         int some = getList().size();
@@ -14,15 +14,20 @@ public class RemoveDivisibleByThree {
                 some--;
             }
         }
-        System.out.println(getList());
     }
 
     public void removeWithRemoveIf() {
         getList().removeIf(element -> element % 3 == 0);
+    }
+
+    public void print() {
+        remove();
+        System.out.println(getList());
+        removeWithRemoveIf();
         System.out.println(getList());
     }
 
     public List<Integer> getList() {
-        return this.integerList;
+        return this.list;
     }
 }

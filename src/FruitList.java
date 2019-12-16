@@ -13,6 +13,10 @@ public class FruitList {
         if (!getFruitsList().contains(grapefruit)) {
             if (getFruitsList().contains(orange)) getFruitsList().set(getFruitsList().indexOf(orange), grapefruit);
         }
+    }
+
+    public void print() {
+        checkFruits();
         System.out.println(getFruitsList());
     }
 
