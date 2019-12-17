@@ -1,8 +1,13 @@
+import fruits.FruitList;
+import fruits.FruitTree;
+import fruits.FruitsMatch;
+import numbers.DivisibleNumbers;
+
 import java.util.Arrays;
 
 public class PrintAll {
     public void print() {
-        RemoveDivisibleByThree removeDivisibleByThree = new RemoveDivisibleByThree();
+        DivisibleNumbers divisibleNumbers = new DivisibleNumbers();
         FruitList fruitListNumberOne = new FruitList(Arrays.asList("Banana", "Avocado", "Apple", "Orange"));
         FruitList fruitListNumberTwo = new FruitList(Arrays.asList("Blackberry", "Banana", "Chary", "Orange"));
         FruitsMatch fruitsMatch = new FruitsMatch(fruitListNumberOne, fruitListNumberTwo);
@@ -12,7 +17,7 @@ public class PrintAll {
         fruitTree.print();
 
         System.out.println();
-        removeDivisibleByThree.print();
+        divisibleNumbers.print();
 
         System.out.println();
         fruitsMatch.searchForMatch();

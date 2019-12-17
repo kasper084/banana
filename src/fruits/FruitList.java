@@ -1,3 +1,5 @@
+package fruits;
+
 import java.util.List;
 
 public class FruitList {

@@ -1,6 +1,8 @@
+package fruits;
+
 import java.util.Comparator;
 
-public class DescendingComparator implements Comparator<String> {
+public class FruitComparator implements Comparator<String> {
 
     @Override
     public int compare(String first, String second) {

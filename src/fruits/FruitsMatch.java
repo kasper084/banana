@@ -1,3 +1,7 @@
+package fruits;
+
+import fruits.FruitList;
+
 public class FruitsMatch {
     private FruitList fruitListNumberOne;
     private FruitList fruitListNumberTwo;

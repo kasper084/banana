@@ -1,9 +1,11 @@
+package fruits;
+
 import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class FruitTree {
 
-    private SortedSet<String> fruitListSortedSet = new TreeSet<>(new DescendingComparator());
+    private SortedSet<String> fruitListSortedSet = new TreeSet<>(new FruitComparator());
 
     public void add(FruitList fruitList) {
         for (int element = 0; element < fruitList.getFruitsList().size(); element++) {

@@ -1,8 +1,10 @@
+package numbers;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class RemoveDivisibleByThree {
+public class DivisibleNumbers {
     private List<Integer> list = new ArrayList<>(Arrays.asList(3, 9, 11, 18, 20, 22));
 
     public void remove() {
