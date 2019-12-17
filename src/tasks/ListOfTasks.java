@@ -8,7 +8,7 @@ import numbers.DivisibleNumbers;
 import java.util.Arrays;
 
 public class ListOfTasks {
-    public void print() {
+    public void printResults() {
         DivisibleNumbers divisibleNumbers = new DivisibleNumbers();
         FruitList fruitListNumberOne = new FruitList(Arrays.asList("Banana", "Avocado", "Apple", "Orange"));
         FruitList fruitListNumberTwo = new FruitList(Arrays.asList("Blackberry", "Banana", "Chary", "Orange"));
