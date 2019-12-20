@@ -14,7 +14,9 @@ public class BookShell {
 
     public void checkByDate(Date date) {
         if (getBorrowedBooks().get(date) != null) {
-            System.out.println(date + " " + getBorrowedBooks().get(date).getBookName());
+            System.out.println(date
+                    + " "
+                    + getBorrowedBooks().get(date).getBookName());
         } else {
             System.out.println("No books were taken on that day");
         }
@@ -24,7 +26,9 @@ public class BookShell {
         System.out.println("Those "
                 + getNumOfTakenBooks()
                 + " books were take");
-        map.forEach((date, book) -> System.out.println((date + ":" + book.getBookName())));
+        map.forEach((date, book) -> System.out.println((date
+                + ":"
+                + book.getBookName())));
     }
 
     public Map<Date, Book> getBorrowedBooks() {
