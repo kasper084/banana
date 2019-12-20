@@ -25,7 +25,7 @@ public class BookShell {
     public void checkAllBooks(Map<Date, Book> map) {
         System.out.println("Those "
                 + getNumOfTakenBooks()
-                + " books were take");
+                + " books were taken:");
         map.forEach((date, book) -> System.out.println((date
                 + ":"
                 + book.getBookName())));
