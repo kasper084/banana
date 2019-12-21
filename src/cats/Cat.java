@@ -1,3 +1,4 @@
+package cats;
 
 public class Cat {
     private NoiseInterface meow = noise -> System.out.println(getName() + " says " + noise);
