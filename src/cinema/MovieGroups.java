@@ -21,14 +21,19 @@ public class MovieGroups {
         System.out.println();
         moviesFilter.forEach((genre, price) -> {
 
+            int num = 0;
             double sum = 0;
             for (double d : price.keySet()) {
                 sum += d;
+                num++;
             }
-            double average = sum / price.size();
-            System.out.println(" Average ticket price for "
+            double average = Math.floor(sum / price.size());
+
+            System.out.println("We have "
+                    + num
+                    + " movies in "
                     + genre
-                    + " is "
+                    + " genre and average ticket price is "
                     + average);
         });
     }
