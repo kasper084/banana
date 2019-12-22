@@ -12,10 +12,11 @@ public class UserHandler {
         getList().add(user);
     }
 
-    public void userFilter(List list) {
+    public void putUsersFilter(List list) {
         LocalDate thatDay = LocalDate.of(2019, 12, 8);
         Stream<User> filter = getList().stream()
                 .filter(user -> user.getDate().isAfter(thatDay));
+        System.out.println(filter.count());
 
     }
 
