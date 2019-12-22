@@ -1,11 +1,8 @@
-import cats.Clowder;
-import users.UsersList;
+import tasks.ListOfTasks;
 
 public class Main {
     public static void main(String[] args) {
-        Clowder clowder = new Clowder();
-        UsersList usersList = new UsersList();
-        clowder.makeNoise();
-        usersList.sortByGroups();
+        ListOfTasks tasks = new ListOfTasks();
+        tasks.printResult();
     }
 }

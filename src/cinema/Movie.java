@@ -1,16 +1,16 @@
 package cinema;
 
 public class Movie {
-    private double prise;
+    private double ticketPrice;
     private String genre;
 
-    public Movie(double prise, String genre) {
-        this.prise = prise;
+    public Movie(double ticketPrice, String genre) {
+        this.ticketPrice = ticketPrice;
         this.genre = genre;
     }
 
-    public double getPrise() {
-        return prise;
+    public double getTicketPrice() {
+        return ticketPrice;
     }
 
     public String getGenre() {

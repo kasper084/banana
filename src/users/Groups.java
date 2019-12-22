@@ -19,6 +19,7 @@ public class Groups {
                 .filter(user -> user.getDate().isAfter(thatDay))
                 .collect(Collectors.groupingBy(User::getTeam,
                         Collectors.groupingBy(User::getMail)));
+
         System.out.println();
         userFilter.forEach((team, usersList) -> System.out.println(team
                 + " team: "
