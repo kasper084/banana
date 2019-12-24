@@ -1,18 +1,24 @@
 package cats;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Clowder {
-    private Cat firstCat= new Cat("Nakamura");
-    private Cat secondCat = new Cat("Betsi");
-    private Cat thirdCat = new Cat("Vasulko");
-    private List<Cat> cats = new ArrayList<>(Arrays.asList(firstCat, secondCat, thirdCat));
+    private List<Cat> cats = new ArrayList<>();
+
+    public void addCats() {
+        Cat firstCat = new Cat("Nakamura");
+        Cat secondCat = new Cat("Betsi");
+        Cat thirdCat = new Cat("Vasulko");
+
+        getCats().add(firstCat);
+        getCats().add(secondCat);
+        getCats().add(thirdCat);
+    }
 
     public void makeNoise() {
-        for (Cat cat:
-                getCats()) {
+        addCats();
+        for (Cat cat : getCats()) {
             cat.sayMeow();
         }
     }
