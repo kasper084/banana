@@ -7,20 +7,21 @@ public class SafeDivision {
     private Scanner scanner = new Scanner(System.in);
     private int a;
     private int b;
+    private int num;
 
     public void getResult() {
 
         System.out.println("Enter two numbers for division operation");
 
         try {
-            enterA();
-            enterB();
+            getA();
+            getB();
             divide();
 
         } catch (ArithmeticException e) {
             System.out.println("You can't divide by zero"
-                    + "enter second number again");
-            enterB();
+                    + " enter second number again");
+            getB();
             divide();
         }
     }
@@ -31,27 +32,25 @@ public class SafeDivision {
                 + result);
     }
 
-    public void enterA() {
+    public int enterNum() {
         try {
             System.out.println("Enter int");
-            a = scanner.nextInt();
+            num = scanner.nextInt();
             System.out.println("Okay");
         } catch (InputMismatchException e) {
             System.out.println("Nope");
             scanner.next();
-            enterA();
+            enterNum();
         }
+        return num;
+
     }
 
-    public void enterB() {
-        try {
-            System.out.println("Enter int");
-            b = scanner.nextInt();
-            System.out.println("Okay");
-        } catch (InputMismatchException e) {
-            System.out.println("Nope");
-            scanner.next();
-            enterB();
-        }
+    public void getA() {
+        this.a = enterNum();
+    }
+
+    public void getB() {
+        this.b = enterNum();
     }
 }
