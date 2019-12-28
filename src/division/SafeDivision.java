@@ -7,7 +7,7 @@ public class SafeDivision {
     private Scanner scanner = new Scanner(System.in);
     private int a;
     private int b;
-    private int num;
+    private int num = scanner.nextInt();
 
     public void getResult() {
 
@@ -27,9 +27,8 @@ public class SafeDivision {
     }
 
     public void divide() {
-        int result = a / b;
-        System.out.println("Result:  "
-                + result);
+        num = a / b;
+        System.out.printf("Result:  %d%n", num);
     }
 
     public int enterNum() {
