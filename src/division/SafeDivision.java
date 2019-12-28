@@ -7,7 +7,7 @@ public class SafeDivision {
     private Scanner scanner = new Scanner(System.in);
     private int a;
     private int b;
-    private int num = scanner.nextInt();
+    private int num;
 
     public void getResult() {
 
