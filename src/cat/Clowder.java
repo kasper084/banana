@@ -35,7 +35,7 @@ public class Clowder {
         director.createLynx(catBuilder);
         Cat lynx = catBuilder.getYourCat();
         System.out.println(lynx.getType()
-                + ""
+                + " "
                 + lynx.getSubspecies());
     }
 
@@ -43,7 +43,7 @@ public class Clowder {
         director.createFelis(catBuilder);
         Cat felis = catBuilder.getYourCat();
         System.out.println(felis.getType()
-                + ""
+                + " "
                 + felis.getBreed());
     }
 }
