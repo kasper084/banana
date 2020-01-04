@@ -28,7 +28,7 @@ public class SafeDivision {
         }
     }
 
-    public int getValidNumber() {
+    private int getValidNumber() {
         try {
             System.out.println("Enter number");
             num = scanner.nextInt();
@@ -41,16 +41,16 @@ public class SafeDivision {
         return num;
     }
 
-    public void divide() {
+    private void divide() {
         num = a / b;
         System.out.printf("Result:  %d%n", num);
     }
 
-    public void getA() {
+    private void getA() {
         this.a = getValidNumber();
     }
 
-    public void getB() {
+    private void getB() {
         this.b = getValidNumber();
     }
 }
