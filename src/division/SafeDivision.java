@@ -23,7 +23,7 @@ public class SafeDivision {
                     + " enter second number again");
             getB();
             divide();
-        }finally {
+        } finally {
             scanner.close();
         }
     }
