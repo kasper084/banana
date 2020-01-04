@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SafeDivision {
-    private Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     private int a;
     private int b;
     private int num;
@@ -23,7 +23,22 @@ public class SafeDivision {
                     + " enter second number again");
             getB();
             divide();
+        }finally {
+            scanner.close();
         }
+    }
+
+    public int getValidNumber() {
+        try {
+            System.out.println("Enter number");
+            num = scanner.nextInt();
+            System.out.println("Okay");
+        } catch (InputMismatchException i) {
+            System.out.println("Nope");
+            scanner.next();
+            getValidNumber();
+        }
+        return num;
     }
 
     public void divide() {
@@ -31,25 +46,11 @@ public class SafeDivision {
         System.out.printf("Result:  %d%n", num);
     }
 
-    public int enterNum() {
-        try {
-            System.out.println("Enter int");
-            num = scanner.nextInt();
-            System.out.println("Okay");
-        } catch (InputMismatchException e) {
-            System.out.println("Nope");
-            scanner.next();
-            enterNum();
-        }
-        return num;
-
-    }
-
     public void getA() {
-        this.a = enterNum();
+        this.a = getValidNumber();
     }
 
     public void getB() {
-        this.b = enterNum();
+        this.b = getValidNumber();
     }
 }
