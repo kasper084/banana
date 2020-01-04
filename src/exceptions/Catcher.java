@@ -6,14 +6,14 @@ public class Catcher {
     public void hunt() {
 
         try {
-            throw new ExceptionA();
-        } catch (ExceptionA a) {
+            throw new ExistentialException();
+        } catch (ExistentialException a) {
             System.out.println(a.getMessage());
         }
 
         try {
-            throw new ExceptionB();
-        } catch (ExceptionB b) {
+            throw new ChildOfExistentialException();
+        } catch (ChildOfExistentialException b) {
             System.out.println(b.getMessage());
         }
 
