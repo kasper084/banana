@@ -1,4 +1,4 @@
-package cat;
+package enums;
 
 public enum Type {
     BIG_CAT,

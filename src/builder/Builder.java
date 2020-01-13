@@ -1,7 +1,7 @@
 package builder;
 
-import cat.Species;
-import cat.Type;
+import enums.Species;
+import enums.Type;
 
 public interface Builder {
     void setType(Type type);

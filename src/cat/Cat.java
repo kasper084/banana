@@ -1,5 +1,8 @@
 package cat;
 
+import enums.Species;
+import enums.Type;
+
 public class Cat {
     private final Type type;
     private final Species species;

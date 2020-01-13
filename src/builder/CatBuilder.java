@@ -1,8 +1,8 @@
 package builder;
 
 import cat.Cat;
-import cat.Species;
-import cat.Type;
+import enums.Species;
+import enums.Type;
 
 public class CatBuilder implements Builder {
     private Type type;
