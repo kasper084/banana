@@ -10,16 +10,12 @@ public class NumberContainer {
 
     public void fillUp() {
         for (int start = 0; start < getMagicNum(); start++) {
-            getListOfNumbers().add(getRandomInt());
+            listOfNumbers.add(getRandomInt());
         }
     }
 
     private Integer getRandomInt() {
         return random.nextInt();
-    }
-
-    private List<Integer> getListOfNumbers() {
-        return this.listOfNumbers;
     }
 
     private Integer getMagicNum() {
