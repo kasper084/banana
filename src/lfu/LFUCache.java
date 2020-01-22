@@ -24,11 +24,4 @@ public class LFUCache {
         this.frequency = frequency;
     }
 
-    @Override
-    public String toString() {
-        return "LFUCache{" +
-                "data='" + data + '\'' +
-                ", frequency=" + frequency +
-                '}';
-    }
 }
