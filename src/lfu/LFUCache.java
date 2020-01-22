@@ -23,5 +23,4 @@ public class LFUCache {
     public void setFrequency(int frequency) {
         this.frequency = frequency;
     }
-
 }
