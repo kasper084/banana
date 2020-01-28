@@ -9,11 +9,10 @@ public class Request extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println(currentThread().getName()
-                + " Done collecting data");
+        System.out.printf("\n%s Done collecting data%n", currentThread().getName());
     }
 
     public void showMessage() {
-        System.out.println("requesting data");
+        System.out.printf("\nRequesting Data...%n");
     }
 }

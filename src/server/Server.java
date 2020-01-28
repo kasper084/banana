@@ -5,17 +5,23 @@ import request.Request;
 import java.util.Random;
 
 public class Server {
-    private Random random = new Random();
+    private static final int MAGIC_NUM = 7;
+    private static final int BOUND = 9;
 
     public void processRequest(Request request) {
-        int criticalNum = random.nextInt(9);
+        int criticalNum = getRandomNum();
         request.start();
         request.showMessage();
-        if (criticalNum > 7) throw new IllegalThreadStateException();
+        if (criticalNum > MAGIC_NUM) throw new IllegalThreadStateException();
         else showMessage();
     }
 
     public void showMessage() {
-        System.out.println("OK");
+        System.out.println("SERVER OK");
+    }
+
+    private int getRandomNum() {
+        Random random = new Random();
+        return random.nextInt(BOUND);
     }
 }
