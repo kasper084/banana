@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class LFU {
+    private static final int CAPACITY = 10;
+    private static final int MIN_FREQUENCY = 1;
     private static Map<Integer, LFUCache> cache = new LinkedHashMap<>();
 
     public void addEntry(int key, String data) {
@@ -45,13 +47,12 @@ public class LFU {
     }
 
     private boolean isFull() {
-        int capacity = 10;
-        return cache.size() == capacity;
+        return cache.size() == CAPACITY;
     }
 
     public void printMostRequested() {
         List<String> mostRequested = cache.values().stream()
-                .filter(lfuCache -> lfuCache.getFrequency() > 1)
+                .filter(lfuCache -> lfuCache.getFrequency() > MIN_FREQUENCY)
                 .map(LFUCache::getData)
                 .collect(Collectors.toList());
         System.out.println(mostRequested);

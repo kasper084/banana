@@ -12,11 +12,16 @@ public class TaskList {
     }
 
     private void addInfo() {
-        String[] bandArray = {"Pantera", "Slayer", "Sleep", "Kyuss", "Electric Wizard",
-                "Black Sabbath", "Melvins", "Saint Vitus", "RED FANG", "Mother Witch & Dead Water Ghosts"};
-        for (int num = 0; num < 10; num++) {
-            lfu.addEntry(num, bandArray[num]);
-        }
+        lfu.addEntry(0, "Pantera");
+        lfu.addEntry(1, "Slayer");
+        lfu.addEntry(2, "Sleep");
+        lfu.addEntry(3, "Kyuss");
+        lfu.addEntry(4, "Electric Wizard");
+        lfu.addEntry(5, "Black Sabbath");
+        lfu.addEntry(6, "Melvins");
+        lfu.addEntry(7, "Saint Vitus");
+        lfu.addEntry(8, "RED FANG");
+        lfu.addEntry(9, "Mother Witch & Dead Water Ghosts");
     }
 
     private void createFakeRequest() {
