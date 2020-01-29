@@ -8,12 +8,7 @@ public class ServerRunner {
     public void answerRequest() {
         Server server = new Server();
         for (int start = 0; start < NUM_OF_REQUESTS; start++) {
-            try {
                 server.processRequest(new Request());
-            } catch (IllegalThreadStateException i) {
-                System.out.printf("\nError.Trying again%n");
-                server.processRequest(new Request());
-            }
         }
     }
 }

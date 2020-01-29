@@ -15,8 +15,13 @@ public class Server {
         ExecutorService service = Executors.newSingleThreadExecutor();
         service.submit(request);
         request.showMessage();
-        if (criticalNum > MAGIC_NUM) throw new IllegalThreadStateException();
-        else showMessage();
+        try {
+            if (criticalNum > MAGIC_NUM) throw new IllegalThreadStateException();
+            else showMessage();
+        } catch (IllegalThreadStateException i) {
+            System.out.printf("\nError.Trying again%n");
+            service.submit(request);
+        }
         service.shutdown();
     }
 
