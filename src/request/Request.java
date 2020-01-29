@@ -5,7 +5,7 @@ public class Request extends Thread {
     @Override
     public void run() {
         try {
-            sleep(500);
+            sleep(700);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
