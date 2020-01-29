@@ -12,12 +12,19 @@ public class Server {
         int criticalNum = getRandomNum();
         request.start();
         request.showMessage();
-        if (criticalNum > MAGIC_NUM) throw new IllegalThreadStateException();
-        else showMessage();
+        try {
+            if (criticalNum > MAGIC_NUM) throw new IllegalThreadStateException();
+            else showMessage();
+        } catch (IllegalThreadStateException i) {
+            System.out.println("\nSERVER: ERROR"
+                    + "\n"
+                    + "\nTrying again...");
+            new Request().start();
+        }
     }
 
     public void showMessage() {
-        System.out.println("SERVER OK");
+        System.out.println("SERVER: OK");
     }
 
     private int getRandomNum() {
