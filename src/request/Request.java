@@ -1,15 +1,15 @@
 package request;
 
-public class Request extends Thread {
+public class Request implements Runnable {
 
     @Override
     public void run() {
         try {
-            sleep(500);
+            Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.printf("\n%s Done collecting data%n", currentThread().getName());
+        System.out.printf("\n%s Done collecting data%n", Thread.currentThread().getName());
     }
 
     public void showMessage() {

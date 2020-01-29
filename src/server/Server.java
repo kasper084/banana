@@ -3,6 +3,8 @@ package server;
 import request.Request;
 
 import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Server {
     private static final int MAGIC_NUM = 7;
@@ -10,10 +12,12 @@ public class Server {
 
     public void processRequest(Request request) {
         int criticalNum = getRandomNum();
-        request.start();
+        ExecutorService service = Executors.newSingleThreadExecutor();
+        service.submit(request);
         request.showMessage();
         if (criticalNum > MAGIC_NUM) throw new IllegalThreadStateException();
         else showMessage();
+        service.shutdown();
     }
 
     public void showMessage() {
