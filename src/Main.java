@@ -5,5 +5,4 @@ public class Main {
         AppRunner runner = new AppRunner();
         runner.processingTransaction();
     }
-    {}
 }
