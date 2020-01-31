@@ -19,6 +19,18 @@ public class Account {
         return userId;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setBalance(Double balance) {
+        this.balance = balance;
+    }
+
     public Double getBalance() {
         return balance;
     }
