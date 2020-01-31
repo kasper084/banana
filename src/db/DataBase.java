@@ -5,6 +5,7 @@ import entity.User;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class DataBase {
     private static Map<User, Account> db = dataBuilder();
@@ -31,5 +32,17 @@ public class DataBase {
 
     public static void setDb(Map<User, Account> db) {
         DataBase.db = db;
+    }
+
+    public Optional<User> getUser(String userId) {
+        return getDb().keySet().stream()
+                .filter(user -> user.getId().equals(userId))
+                .findFirst();
+    }
+
+    public Optional<Account> getAccount(String userId) {
+        return getDb().values().stream()
+                .filter(account -> account.getUserId().equals(userId))
+                .findFirst();
     }
 }

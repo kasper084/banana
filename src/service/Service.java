@@ -4,30 +4,38 @@ import db.DataBase;
 import entity.Account;
 import entity.User;
 
-import java.util.Optional;
-
 public class Service {
+    private static final String ERROR = "Transaction Failed\n";
+    private static final String SUCCESS = "Transaction Successful\n";
     private static final String ACCOUNT_NOT_FOUND = "Account no found";
-    private static final String NO_ENOUGH_MONEY = "No enough money";
 
     private DataBase dataBase = new DataBase();
 
-    private Optional<Account> getAccount(User user) {
-        return Optional.ofNullable(dataBase.readFromDb(user));
+    private Account getAccount(String userId) {
+        return dataBase.getAccount(userId)
+                .orElseThrow(() -> new IllegalArgumentException(ACCOUNT_NOT_FOUND));
     }
 
-    public void takeMoneyFromAccount(Double amount, User user) {
-        Account account = getAccount(user)
+    public User getUser(String userId) {
+        return dataBase.getUser(userId)
                 .orElseThrow(() -> new IllegalArgumentException(ACCOUNT_NOT_FOUND));
+    }
+
+    public void takeMoneyFromAccount(Double amount, String userId) {
+        User user = getUser(userId);
+        Account account = getAccount(userId);
         Double balance = account.getBalance();
-        if (balance <= amount)
+        if (balance >= amount) {
             account.setBalance(balance - amount);
-        else System.out.println(NO_ENOUGH_MONEY);
+            System.out.println(SUCCESS);
+        } else {
+            System.out.println(ERROR);
+        }
         saveToDb(user, account);
     }
 
-    public Optional<Double> showBalance(User user) {
-        return Optional.ofNullable(dataBase.readFromDb(user).getBalance());
+    public Double showBalance(String userId) {
+        return dataBase.readFromDb(getUser(userId)).getBalance();
     }
 
     private void saveToDb(User user, Account account) {
