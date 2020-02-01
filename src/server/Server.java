@@ -8,6 +8,8 @@ public class Server {
     private static final int MAGIC_NUM = 7;
     private static final int BOUND = 9;
 
+    private static Random random = new Random();
+
     public void processRequest(Request request) {
         int criticalNum = getRandomNum();
         request.start();
@@ -16,9 +18,7 @@ public class Server {
             if (criticalNum > MAGIC_NUM) throw new IllegalThreadStateException();
             else showMessage();
         } catch (IllegalThreadStateException i) {
-            System.out.println("\nSERVER: ERROR"
-                    + "\n"
-                    + "\nTrying again...");
+            System.out.printf("\nSERVER: ERROR\n\nTrying again...%n");
             new Request().start();
         }
     }
@@ -28,7 +28,6 @@ public class Server {
     }
 
     private int getRandomNum() {
-        Random random = new Random();
         return random.nextInt(BOUND);
     }
 }
