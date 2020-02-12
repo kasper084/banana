@@ -11,7 +11,9 @@ public class Pool implements Runnable {
 
     @Override
     public void run() {
+
         System.out.println("Connecting...");
+
         try {
             Thread.sleep(1000);
             System.out.println("Checking account balance...");
@@ -20,6 +22,7 @@ public class Pool implements Runnable {
             System.out.println("Sending request...");
             service.takeMoneyFromAccount(AMOUNT, USER_ID);
             Thread.sleep(600);
+
         } catch (InterruptedException | IllegalArgumentException i) {
             System.out.println(i.getMessage());
             System.out.println(ERROR);

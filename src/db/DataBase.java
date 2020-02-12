@@ -11,6 +11,7 @@ public class DataBase {
     private static Map<User, Account> db = dataBuilder();
 
     private static Map<User, Account> dataBuilder() {
+
         Map<User, Account> map = new HashMap<>();
         User dave = new User("13", "Dave");
         Account daveAccount = new Account("03", "13", 1000.25);

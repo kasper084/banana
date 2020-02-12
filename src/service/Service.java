@@ -22,15 +22,18 @@ public class Service {
     }
 
     public void takeMoneyFromAccount(Double amount, String userId) {
+
         User user = getUser(userId);
         Account account = getAccount(userId);
         Double balance = account.getBalance();
+
         if (balance >= amount) {
             account.setBalance(balance - amount);
             System.out.println(SUCCESS);
         } else {
             System.out.println(ERROR);
         }
+
         saveToDb(user, account);
     }
 
