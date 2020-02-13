@@ -3,12 +3,12 @@ package entity;
 public class Account {
     private String id;
     private String userId;
-    private Double balance;
+    private Double dollars;
 
-    public Account(String id, String userId, Double balance) {
+    public Account(String id, String userId, Double dollars) {
         this.id = id;
         this.userId = userId;
-        this.balance = balance;
+        this.dollars = dollars;
     }
 
     public String getId() {
@@ -27,11 +27,11 @@ public class Account {
         this.userId = userId;
     }
 
-    public void setBalance(Double balance) {
-        this.balance = balance;
+    public void setDollars(Double dollars) {
+        this.dollars = dollars;
     }
 
-    public Double getBalance() {
-        return balance;
+    public Double getDollars() {
+        return dollars;
     }
 }
