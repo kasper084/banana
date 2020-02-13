@@ -5,7 +5,7 @@ import service.Service;
 public class Pool implements Runnable {
     private static final Double AMOUNT = 100.0;
     private static final String USER_ID = "13";
-    private static final String ERROR = "Transaction Failed";
+    private static final String ERROR_MESSAGE = "Transaction Failed";
 
     private Service service = new Service();
 
@@ -25,7 +25,7 @@ public class Pool implements Runnable {
 
         } catch (InterruptedException | IllegalArgumentException i) {
             System.out.println(i.getMessage());
-            System.out.println(ERROR);
+            System.out.println(ERROR_MESSAGE);
         }
     }
 }
